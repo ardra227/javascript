@@ -1,0 +1,12 @@
+// reducefunc takes an array, reducer() and initialValue as argument and equivalent to inbuilt filter function
+let a = [1, 2, 3, 4, 5];
+const sumReduce = (accumulator, currentValue) => accumulator + currentValue;
+function reducefunc(a, reducer, initialValue) {    
+    let accumulator = initialValue === undefined ? 0 : initialValue         
+    for(let i=0;i<a.length;i++)        
+        accumulator = reducer(accumulator, a[i], i, a);    
+        return accumulator;}
+    const sum = reducefunc(a, sumReduce);
+    console.log(sum); 
+    const sum1 = reducefunc(a, sumReduce, 5);
+    console.log(sum1);
