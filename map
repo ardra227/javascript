@@ -1,1 +1,13 @@
+// mapfunction takes an list or array and function as argument and equivalent to inbuilt map function
+let a = [1, 2, 3, 4, 5];
+function mapfunction(a, mapFunc) {    
+    const mapArr = [];   
+for(let i=0;i<a.length;i++) {        
+    const result = mapFunc(a[i], i, a);        
+    mapArr.push(result);    }    
+    return mapArr;}
+const squareArr2 = mapfunction(a, num => num ** 5);
+console.log(squareArr2);
 
+
+o/p-[ 1, 32, 243, 1024, 3125 ]
