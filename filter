@@ -1,0 +1,11 @@
+// filterfunc takes an list or array and function as argument and equivalent to inbuilt filter function
+let a = [1, 2, 3, 4, 5];
+function filterfunc(a, filterFunc) {    
+    const filterArr = []; 
+    for(let i=0;i<a.length;i++) {        
+        const result = filterFunc(a[i], i, a);       
+        if(result)             
+        filterArr.push(a[i]);}   
+        return filterArr;}
+ const oddArr2 = filterfunc(a, num => num % 2 === 0);
+ console.log(oddArr2);
