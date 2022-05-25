@@ -1,1 +1,10 @@
-
+// foreachfunction takes an list or array and function as argument and equivalent to inbuilt map function
+let a = [1, 2, 3, 4, 5];
+function foreachfunction(a, mapFunc) {    
+    const mapArr = [];   
+for(let i=0;i<a.length;i++) {        
+    const result = mapFunc(a[i], i, a);        
+    mapArr.push(result);    }  
+    console.log(mapArr)
+    return}
+const squareArr2 =foreachfunction(a, num => num * 5);
